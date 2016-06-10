@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jr3-CI-Nfv" id="UT0-X3-wA2">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -28,7 +28,13 @@
                             <outlet property="delegate" destination="Vj0-TY-51a" id="6UN-cG-iOO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="bZW-gx-Idr"/>
+                    <navigationItem key="navigationItem" title="Shopping Cart" id="bZW-gx-Idr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6l0-ew-1Kl">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="Vj0-TY-51a" id="dTx-p7-vnj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vaK-gA-HQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
