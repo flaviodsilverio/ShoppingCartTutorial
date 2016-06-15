@@ -23,36 +23,45 @@ class ShoppingCart: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return shoppingItems.count
     }
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "myFirstCell   ")
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         
         cell.textLabel?.text = shoppingItems[indexPath.row]
+        UserDefaults.standard()
         
         return cell
     }
+        
+
     
     @IBAction func addButtonPressed(sender: AnyObject) {
         
-        let addItemAlertController = UIAlertController(title: "Add Item", message: "Please insert the name of the new shopping item:", preferredStyle: .Alert)
+        let addItemAlertController = UIAlertController(title: "Add Item", message: "Please insert the name of the new shopping item:", preferredStyle: .alert)
         
-        addItemAlertController.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+        addItemAlertController.addTextField(configurationHandler: {(textField: UITextField!) in
             
             textField.placeholder = "Shopping Item Name"
             
         })
         
-        addItemAlertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
+        addItemAlertController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: nil))
         
-        addItemAlertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {
+        addItemAlertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
             (action) in
             
             if(addItemAlertController.textFields![0].text!.characters.count > 0){
@@ -64,7 +73,7 @@ class ShoppingCart: UITableViewController {
         
         }))
         
-        self.presentViewController(addItemAlertController, animated: false, completion: nil)
+        self.present(addItemAlertController, animated: false, completion: nil)
     }
     
 }

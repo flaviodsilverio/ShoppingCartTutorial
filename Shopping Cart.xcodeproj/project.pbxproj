@@ -139,6 +139,9 @@
 				TargetAttributes = {
 					1B70977E1D05D76A00B6050B = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = NXBHE32CVP;
+						DevelopmentTeamName = "Flavio Silverio";
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -291,6 +294,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Flavio-Silverio.Shopping-Cart";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -302,6 +306,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Flavio-Silverio.Shopping-Cart";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -324,6 +329,7 @@
 				1B7097961D05D76B00B6050B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
